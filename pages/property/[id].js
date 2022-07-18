@@ -5,7 +5,7 @@ import { BsGridFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 import millify from 'millify';
 
-import { baseUrl, fetchApi } from '../utils/fetchApi';
+import { baseUrl, fetchApi } from '../../utils/fetchApi';
 import ImageScrollbar from '../../components/ImageScrollbar';
 
 const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title, baths, area, agency, isVerified, description, type, purpose, furnishingStatus, amenities, photos } }) => (
@@ -15,7 +15,7 @@ const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title
       <Flex paddingTop='2' alignItems='center'>
         <Box paddingRight='3' color='green.400'>{isVerified && <GoVerified />}</Box>
         <Text fontWeight='bold' fontSize='lg'>
-          AED {price} {rentFrequency && `/${rentFrequency}`}
+          Rs {price} {rentFrequency && `/${rentFrequency}`}
         </Text>
         <Spacer />
         <Avatar size='sm' src={agency?.logo?.url}></Avatar>
